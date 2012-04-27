@@ -9,4 +9,4 @@ Update submodules:
     git submodule init
     git submodule update
 
-Thanks to vimcasts.org (http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/)
+Thanks to vimcasts.org (http://vimcasts.org/e/27)
