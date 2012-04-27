@@ -1,3 +1,7 @@
+" Start pathogen for handling bundles
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 " Can't code without it
 syntax on
 
