@@ -2,6 +2,10 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" Map leader
+let mapleader = ","
+let g:mapleader = ","
+
 " Can't code without it
 syntax on
 
@@ -142,3 +146,18 @@ augroup encrypted
     autocmd BufWritePost,FileWritePost    *.gpg   u
 augroup END
 " }}}
+
+" {{{ Preserve-command - helper function that saves last search and cursor position before executing command
+function! Preserve(command)
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Invoke command
+    execute a:command
+    " Clean up
+    let @/=_s
+    call cursor(l,c)
+endfunction
+
+nmap <Leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
+nmap <Leader>= :call Preserve("normal gg=G")<CR>
