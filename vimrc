@@ -55,16 +55,19 @@ set fileencodings=utf-8,iso-8859-1
 " Linewidth to endless
 set textwidth=0
 
-" Turn off autoindent
-"set noautoindent
-
-" Auto indent after a {
 set autoindent
 set smartindent
-set shiftwidth=4
-set tabstop=4
-set expandtab
 filetype indent on
+
+" Tab-behavior
+" tab-characters will display as 4 spaces
+set tabstop=4
+" pressing tab / indenting will produce 4 spaces
+set shiftwidth=4
+" backspace will clear 4 spaces, equal to a tab
+set softtabstop=4
+" use spaces instead of tab characters
+set expandtab
 
 " Show line numbers
 set number
