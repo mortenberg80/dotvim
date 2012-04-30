@@ -76,8 +76,12 @@ set expandtab
 " Show line numbers
 set number
 
-" }}}
-
+" Bubble single lines - move line up / down
+nmap <ESC>[A ddkP
+nmap <ESC>[B ddp
+" Bubble multiple lines - move selection up / down
+vmap <ESC>[A xkP`[V`]
+vmap <ESC>[B xp`[V`]
 
 " {{{ Folding
 
@@ -95,7 +99,6 @@ set nofoldenable
 
 " Indicate jump out of the screen when 3 lines before the end of the screen
 "set scrolloff=3
-
 
 " }}}
 
@@ -119,6 +122,8 @@ match WhitespaceEOL /\s\+$/
 
 " Automatically reload .vimrc when changed
 autocmd! bufwritepost .vimrc source %
+
+" }}}
 
 " {{{ Transparent editing of gpg encrypted files
 " By Wouter Hanegraaff <wouter@blub.net>
