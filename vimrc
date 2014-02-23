@@ -64,12 +64,12 @@ set smartindent
 filetype indent on
 
 " Tab-behavior
-" tab-characters will display as 4 spaces
-set tabstop=4
-" pressing tab / indenting will produce 4 spaces
-set shiftwidth=4
-" backspace will clear 4 spaces, equal to a tab
-set softtabstop=4
+" tab-characters will display as 2 spaces
+set tabstop=2
+" pressing tab / indenting will produce 2 spaces
+set shiftwidth=2
+" backspace will clear 2 spaces, equal to a tab
+set softtabstop=2
 " use spaces instead of tab characters
 set expandtab
 
