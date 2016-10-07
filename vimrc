@@ -63,6 +63,10 @@ set autoindent
 set smartindent
 filetype indent on
 
+" Filetypes
+" handlebars-templates
+au BufNewFile,BufRead *.hbs set filetype=html
+
 " Tab-behavior
 " tab-characters will display as 2 spaces
 set tabstop=2
@@ -74,14 +78,7 @@ set softtabstop=2
 set expandtab
 
 " Show line numbers
-set number
-
-" Bubble single lines - move line up / down
-nmap <ESC>[A ddkP
-nmap <ESC>[B ddp
-" Bubble multiple lines - move selection up / down
-vmap <ESC>[A xkP`[V`]
-vmap <ESC>[B xp`[V`]
+set number relativenumber
 
 " {{{ Folding
 
