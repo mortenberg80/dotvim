@@ -1,6 +1,20 @@
-" Start pathogen for handling bundles
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+" Start vundle for handling bundles
+set rtp+=~/.vim/bundle/vundle/
+call vundle#begin()
+
+" let vundle manage vundle
+Plugin 'gmarik/vundle'
+
+" list all plugins that you'd like to install here
+Plugin 'ctrlpvim/ctrlp.vim' " fuzzy find files
+
+call vundle#end()
+
+" Configure CtrlP - fuzzy file finder
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " Linux/MacOSX
 
 " Map leader
 let mapleader = ","
