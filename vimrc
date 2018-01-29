@@ -12,15 +12,27 @@ Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
+" Map leader
+let mapleader = " "
+let g:mapleader = " "
+
 " Configure CtrlP - fuzzy file finder
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+nmap <leader>, :CtrlPBuffer<cr>
+let g:ctrlp_custom_ignore = {
+    \ 'dir': '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(o|swp|pyc|wav|mp3|ogg|blend|zip)$',
+    \ 'link': 'SOME_BAD_SYMBOLIC_LINKS'
+    \ }
+
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " Linux/MacOSX
 
-" Map leader
-let mapleader = ","
-let g:mapleader = ","
+" Buffer navigation
+nmap <C-e> :e#<cr>
+nmap <C-j> :bnext<cr>
+nmap <C-k> :bprev<cr>
 
 " Can't code without it
 syntax on
