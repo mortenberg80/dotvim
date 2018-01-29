@@ -15,3 +15,7 @@ Update submodules:
 * git submodule update
 
 Thanks to vimcasts.org (http://vimcasts.org/e/27)
+
+Install plugins:
+----------------
+Launch `vim` and run `:PluginInstall`

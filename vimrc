@@ -3,10 +3,12 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 " let vundle manage vundle
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " list all plugins that you'd like to install here
 Plugin 'ctrlpvim/ctrlp.vim' " fuzzy find files
+" Git wrapper
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
